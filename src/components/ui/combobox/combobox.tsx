@@ -119,6 +119,15 @@ const Item = component$<PropsOf<typeof HeadlessCombobox.Item>>(
   },
 );
 
+const Inline = component$<PropsOf<typeof HeadlessCombobox.Inline>>(
+  ({ ...props }) => {
+    return (
+      <HeadlessCombobox.Inline {...props} class={cn('', props.class)}>
+        <Slot />
+      </HeadlessCombobox.Inline>
+    )
+  },
+)
 export const Combobox = {
   Root,
   Label,
@@ -129,4 +138,5 @@ export const Combobox = {
   Item,
   ItemLabel,
   ItemIndicator,
+  Inline
 };

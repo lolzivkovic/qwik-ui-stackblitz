@@ -194,7 +194,7 @@ export default component$(() => {
       <section class="flex flex-col gap-5">
         <h1 class="text-2xl">Combobox</h1>
         <div>
-          <Combobox.Root>
+          <Combobox.Root multiple mode='inline'>
             <Combobox.Label>Fruits</Combobox.Label>
             <Combobox.Control>
               <Combobox.Input />
@@ -202,7 +202,7 @@ export default component$(() => {
                 <LuChevronDown />
               </Combobox.Trigger>
             </Combobox.Control>
-            <Combobox.Popover gutter={8}>
+            <Combobox.Inline>
               {fruits.map((fruit) => (
                 <Combobox.Item key={fruit}>
                   <Combobox.ItemLabel>{fruit}</Combobox.ItemLabel>
@@ -211,7 +211,7 @@ export default component$(() => {
                   </Combobox.ItemIndicator>
                 </Combobox.Item>
               ))}
-            </Combobox.Popover>
+            </Combobox.Inline>
           </Combobox.Root>
         </div>
       </section>
